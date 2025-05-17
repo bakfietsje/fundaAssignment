@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundaAssignmentConsole", "FundaAssignmentConsole\FundaAssignmentConsole.csproj", "{A7997E3F-3BBB-4714-B20A-E46ACC373294}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundaAssignment", "FundaAssignment\FundaAssignment.csproj", "{66839555-F0A6-405A-8497-859E4F04F8C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6F1A7517-DBB3-4384-A3A5-881B497945AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{64628641-460F-46E6-B5C8-5DBD7C0FA662}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+		.dockerignore = .dockerignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{CA1AF3ED-D21F-4A38-9D5A-4D54CBEFF6B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7997E3F-3BBB-4714-B20A-E46ACC373294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7997E3F-3BBB-4714-B20A-E46ACC373294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7997E3F-3BBB-4714-B20A-E46ACC373294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7997E3F-3BBB-4714-B20A-E46ACC373294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66839555-F0A6-405A-8497-859E4F04F8C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66839555-F0A6-405A-8497-859E4F04F8C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66839555-F0A6-405A-8497-859E4F04F8C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66839555-F0A6-405A-8497-859E4F04F8C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA1AF3ED-D21F-4A38-9D5A-4D54CBEFF6B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1AF3ED-D21F-4A38-9D5A-4D54CBEFF6B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1AF3ED-D21F-4A38-9D5A-4D54CBEFF6B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1AF3ED-D21F-4A38-9D5A-4D54CBEFF6B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{66839555-F0A6-405A-8497-859E4F04F8C3} = {64628641-460F-46E6-B5C8-5DBD7C0FA662}
+		{A7997E3F-3BBB-4714-B20A-E46ACC373294} = {64628641-460F-46E6-B5C8-5DBD7C0FA662}
+		{CA1AF3ED-D21F-4A38-9D5A-4D54CBEFF6B5} = {64628641-460F-46E6-B5C8-5DBD7C0FA662}
+	EndGlobalSection
+EndGlobal
