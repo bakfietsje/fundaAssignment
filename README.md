@@ -39,4 +39,25 @@ Make sure you have installed on your machine:
 git clone https://github.com/bakfietsje/fundaAssignment.git
 ```
 2. Create a copy of appsettings.json and name it appsettings.local.json and replace the apikey with one provided by Funda.
-3. 
+
+### Usage
+1. Run the docker image using this command
+```sh
+docker-compose build     
+```
+2. Run the web api in detached mode in order to access it interactively with the console later
+```sh
+docker-compose up -d webapi   
+```
+3. Run the console application
+ ```sh
+docker-compose run --rm consoleapp
+```
+4. You should now be able to interact with the console through the terminal
+
+
+
+
+## Acknowledgments
+
+As requested, AI has been used for the formatting of this readme and spelling mistakes and better readability. Further more, due to limited experience with console applications. AI has helped me create the config part of the program.cs. 
