@@ -26,4 +26,4 @@ jobs:
         run: dotnet build UnitTests/UnitTests.csproj --configuration Release --no-restore
 
       - name: 🧪 Run tests
-        run: dotnet test UnitTests/UnitTests.csproj --no-build --verbosity normal
+        run: dotnet test UnitTests/UnitTests.csproj --verbosity normal
