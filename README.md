@@ -1,63 +1,80 @@
-# Funda assignment
-<!-- TABLE OF CONTENTS -->
+# 📦 Funda Assignment
+
+A project developed as part of the Funda technical assessment.
+
 <details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-  </ol>
+  <summary>📚 Table of Contents</summary>
+
+- [About the Project](#about-the-project)  
+- [Getting Started](#getting-started)  
+  - [Requirements](#requirements)  
+  - [Installation](#installation)  
+- [Usage](#usage)  
+- [Acknowledgments](#acknowledgments)
+
 </details>
 
-## About The Project
+---
 
-![alt text](https://images.ctfassets.net/alcjc9drsa23/6F74ADPFMYsmjSob3NZqMI/a57b61bee1fbcaf0834e0b94d36e46c5/Fallback-image-funda.jpg?fm=webp)
+## 📝 About the Project
 
-This repository was made with the sole purpose of making the Funda assessment. 
+![Funda Image](https://images.ctfassets.net/alcjc9drsa23/6F74ADPFMYsmjSob3NZqMI/a57b61bee1fbcaf0834e0b94d36e46c5/Fallback-image-funda.jpg?fm=webp)
 
-## Getting Started
+This repository contains the solution for the Funda coding assessment. The project includes a self-hosted Web API and a console application that interact with the Funda API.
 
-Below you will find the locally needed software in order to run this solution correctly.
+---
 
-### Requirements
+## 🚀 Getting Started
 
-Make sure you have installed on your machine:
-* .NET 9 SDK
-* Docker
+Below are the steps and requirements to get this project running on your local machine.
 
-### Installation
-1. Clone this repository
-```sh
-git clone https://github.com/bakfietsje/fundaAssignment.git
+### ✅ Requirements
+
+Make sure you have the following installed:
+
+- [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download)
+- [Docker](https://www.docker.com/)
+
+### 📥 Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/bakfietsje/fundaAssignment.git
+   cd fundaAssignment
+   ```
+
+2. Create a new config file:
+   - Copy `appsettings.json` to `appsettings.local.json`
+   - Replace the `apikey` with the one provided by Funda
+
+---
+
+## 💻 Usage
+
+### 🛠 Build the Docker images:
+
+```bash
+docker-compose build
 ```
-2. Create a copy of appsettings.json and name it appsettings.local.json and replace the apikey with one provided by Funda.
 
-### Usage
-1. Run the docker image using this command
-```sh
-docker-compose build     
+### 🌐 Start the Web API in detached mode:
+
+```bash
+docker-compose up -d webapi
 ```
-2. Run the web api in detached mode in order to access it interactively with the console later
-```sh
-docker-compose up -d webapi   
-```
-3. Run the console application
- ```sh
+
+### 💬 Run the Console App interactively:
+
+```bash
 docker-compose run --rm consoleapp
 ```
-4. You should now be able to interact with the console through the terminal
 
+> You should now be able to enter commands in the terminal using `Console.ReadLine()`.
 
+---
 
+## 🙏 Acknowledgments
 
-## Acknowledgments
-
-As requested, AI has been used for the formatting of this readme and spelling mistakes and better readability. Further more, due to limited experience with console applications. AI has helped me create the config part of the program.cs. 
+- AI assistance (ChatGPT) was used to help to fix spelling/grammar mistakes in this readme for better clarity of documentation.
+- Due to limited experience with .NET Console apps, AI also helped implement configuration logic in `Program.cs`.
