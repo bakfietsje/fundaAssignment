@@ -9,9 +9,11 @@ public class TopBrokersWithGardenCommand(IHttpClientFactory httpClientFactory) :
     
     public string Name => "2. Top 10 brokers in Amsterdam that offer a garden";
     
+    private readonly string url = $"api/brokers?searchQuery={Uri.EscapeDataString("/amsterdam/tuin")}&type=koop";
+    
     public async Task ExecuteAsync()
     {
-        var brokers = await _httpClient.GetFromJsonAsync<List<BrokerDto>>("api/brokers?zo=/amsterdam/tuin&type=koop&page=1&pageSize=25");
+        var brokers = await _httpClient.GetFromJsonAsync<List<BrokerDto>>(url);
 
         Console.WriteLine("Now displaying top 10 brokers in Amsterdam that offer a garden");
         foreach (var broker in brokers ?? Enumerable.Empty<BrokerDto>())

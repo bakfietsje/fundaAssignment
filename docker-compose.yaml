@@ -1,0 +1,26 @@
+﻿version: '3.8'
+
+services:
+  webapi:
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PROJECT: FundaAssignment
+    ports:
+      - "8080:8080"
+    container_name: funda-web
+
+  consoleapp:
+    depends_on:
+      - webapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PROJECT: FundaAssignmentConsole
+    stdin_open: true
+    tty: true
+    container_name: funda-console
