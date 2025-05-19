@@ -18,5 +18,6 @@ public class BrokersQueryHandler(IBrokerStatisticService _brokerStatisticService
         var result = mapper.Map<IEnumerable<BrokerDto>>(brokers);
         
         return result;
+        // Commit to see if tests are running correctly
     }
 }
