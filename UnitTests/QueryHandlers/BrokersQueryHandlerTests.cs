@@ -52,7 +52,7 @@ public class BrokersQueryHandlerTests
     }
 
     [Fact]
-    public async Task GetBrokers_WithIncorrectUserInput_ReturnsEmptyList()
+    public async Task GetBrokers_WithIncorrectUserInput_ReturnsEmptyListAndDoesNotThrow()
     {
         // Arrange
         var mockService = new Mock<IBrokerStatisticService>();
