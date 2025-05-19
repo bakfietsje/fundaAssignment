@@ -1,11 +1,14 @@
-using Moq;
 using AutoMapper;
-using FundaAssignment.QueryHandlers;
-using FundaAssignment.Queries;
-using FundaAssignment.Services;
 using FundaAssignment.DTOs;
 using FundaAssignment.Enums;
 using FundaAssignment.Models;
+using FundaAssignment.Queries;
+using FundaAssignment.QueryHandlers;
+using FundaAssignment.Services;
+using Moq;
+using Xunit;
+
+namespace UnitTests.QueryHandlers;
 
 public class BrokersQueryHandlerTests
 {
@@ -41,7 +44,7 @@ public class BrokersQueryHandlerTests
         // Act
         var result = await handler.Handle(query, CancellationToken.None);
 
-       var resultList = result.ToList();
+        var resultList = result.ToList();
 
         // Assert
         Assert.NotNull(result);
