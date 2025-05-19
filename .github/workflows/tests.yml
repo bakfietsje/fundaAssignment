@@ -20,10 +20,10 @@ jobs:
           dotnet-version: '9.0.x'
 
       - name: 🔍 Restore dependencies
-        run: dotnet restore src/UnitTests/UnitTests.csproj
+        run: dotnet restore UnitTests/UnitTests.csproj
 
       - name: 🛠 Build tests
-        run: dotnet build src/UnitTests/UnitTests.csproj --configuration Release --no-restore
+        run: dotnet build UnitTests/UnitTests.csproj --configuration Release --no-restore
 
       - name: 🧪 Run tests
-        run: dotnet test src/UnitTests/UnitTests.csproj --no-build --verbosity normal
+        run: dotnet test UnitTests/UnitTests.csproj --no-build --verbosity normal
