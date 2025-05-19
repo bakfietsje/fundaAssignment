@@ -13,7 +13,6 @@ public class BrokersController(IMediator mediator) : ControllerBase
     [HttpGet]
     [AllowAnonymous]
     [ProducesResponseType(typeof(IEnumerable<BrokerDto>), StatusCodes.Status200OK)]
-    // CI/CD
     public async Task<IActionResult> Get(
         [FromQuery] BrokersFilters filters,
         CancellationToken cancellationToken)
@@ -30,5 +29,6 @@ public class BrokersController(IMediator mediator) : ControllerBase
         var result = await mediator.Send(brokersQuery, cancellationToken);
         
         return Ok(result);
+        // Test commit
     }
 }
