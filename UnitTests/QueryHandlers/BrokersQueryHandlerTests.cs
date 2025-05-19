@@ -12,8 +12,11 @@ namespace UnitTests.QueryHandlers;
 
 public class BrokersQueryHandlerTests
 {
-    [Fact]
-    public async Task Handle_ReturnsMappedBrokers()
+    [Theory]
+    [InlineData(10, 5)]
+    [InlineData(5, 20)]
+    public async Task GetBrokers_WithValidCounts_ReturnsCorrectlyMappedBrokers
+        (int firstBrokerCount, int secondBrokerCount)
     {
         // Arrange
         var mockService = new Mock<IBrokerStatisticService>();
@@ -21,14 +24,20 @@ public class BrokersQueryHandlerTests
 
         var domainBrokers = new List<Broker>
         {
-            new (1, "Makelaar A"),
-            new (2, "Makelaar B"),
+            new (1, "Broker A")
+            {
+                Count = firstBrokerCount
+            },
+            new (2, "Broker B")
+            {
+                Count = secondBrokerCount
+            },
         };
 
         var mappedDtos = new List<BrokerDto>
         {
-            new (1, "Broker A", 10),
-            new (2, "Broker B", 5 )
+            new (1, "Broker A", firstBrokerCount),
+            new (2, "Broker B", secondBrokerCount)
         };
 
         mockService.Setup(s =>
@@ -49,6 +58,10 @@ public class BrokersQueryHandlerTests
         // Assert
         Assert.NotNull(result);
         Assert.Equal(2, resultList.Count);
+        Assert.Equal("Broker A", resultList[0].Name);
+        Assert.Equal(firstBrokerCount, resultList[0].Count);
+        Assert.Equal("Broker B", resultList[1].Name);
+        Assert.Equal(secondBrokerCount, resultList[1].Count);
     }
 
     [Fact]

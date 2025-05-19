@@ -77,4 +77,6 @@ docker-compose run --rm consoleapp
 ## 🙏 Acknowledgments
 
 - AI assistance (ChatGPT) was used to help to fix spelling/grammar mistakes in this readme for better clarity of documentation.
+- AI assistance (ChatGPT) was used to rename certain variables for better readability. This was used because sometimes I was not able to determine the correct term due to English being my 2nd language.
+- SonarQube has been used throughout the project to maintain and improve overall code quality.
 - Due to limited experience with .NET Console apps, AI also helped implement configuration logic in `Program.cs`.
